@@ -1,5 +1,9 @@
 print('You are standing in a field.\nYou have a wide river to the west.\nThere is a cliff to the east.\nThere is a dark forest to the south.\nA beautiful wind-swept plain is to the north.\nWhich direction do you want to go?')
 print('=>', end=' ')
 direction = input()
-
 print('You travel', direction, ' and are immediately killed by a wombat.')
+print('You may choose how many years to remain dead before respawning.')
+print('=>', end=' ')
+yearsToRespawn = int(input())
+print('Due to a glitch when entering your desired respawn time, the universe has decided to make you wait twice as long as you asked.')
+print('You respawn after', yearsToRespawn * 2, 'years, ironically as a wombat')
