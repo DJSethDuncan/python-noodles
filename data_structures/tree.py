@@ -1,4 +1,5 @@
 # provided via csdojo.io/tree
+# video at https://www.youtube.com/watch?v=1-l_UOFi1Xw&list=PLBZBJbE_rGRV8D7XZ08LK6z-4zPoWzu5H&index=9
 
 class Node:
     def __init__(self, data):
