@@ -4,9 +4,10 @@
 
 # EXAMPLE RESULT:
 # Number array generated with 10000000 numbers.
-# What number do you want to find? 9789034
-# Linear search completed in 1255.066005 ms 
-# Binary search completed in 0.0134 ms 
+# What number do you want to find? 9999997
+# Sort completed in 3083.804084 ms 
+# Linear search completed in 1276.310782 ms 
+# Binary search completed in 0.0147 ms 
 
 import random
 import time
@@ -40,7 +41,9 @@ while iteration < iterations:
   numberArray.append(random.randint(1, iterations))
   iteration += 1
 
+sortStartTime = time.perf_counter_ns()
 numberArray.sort()
+sortEndTime = time.perf_counter_ns()
 
 print('Number array generated with % s numbers.' % iterations)
 find = int(input('What number do you want to find? '))
@@ -53,8 +56,10 @@ binaryStartTime = time.perf_counter_ns()
 binary_search(numberArray, find)
 binaryEndTime = time.perf_counter_ns()
 
+elapsedSortTime = (sortEndTime - sortStartTime) / 1000000
 elapsedLinearTime = (linearEndTime - linearStartTime) / 1000000
 elapsedBinaryTime = (binaryEndTime - binaryStartTime) / 1000000
 
+print('Sort completed in % s ms ' % elapsedSortTime)
 print('Linear search completed in % s ms ' % elapsedLinearTime)
 print('Binary search completed in % s ms ' % elapsedBinaryTime)
